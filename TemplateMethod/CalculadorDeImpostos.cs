@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TemplateMethod
+namespace Decorator
 {
     public class CalculadorDeImpostos
     {

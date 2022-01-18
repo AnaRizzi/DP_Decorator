@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TemplateMethod
+namespace Decorator
 {
     public class Orcamento
     {

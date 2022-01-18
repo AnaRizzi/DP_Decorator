@@ -1,4 +1,4 @@
-﻿namespace TemplateMethod
+﻿namespace Decorator
 {
     public class Item
     {

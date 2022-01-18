@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TemplateMethod
+namespace Decorator
 {
     class Program
     {
@@ -30,11 +30,18 @@ namespace TemplateMethod
             calculador.RealizaCalculo(orcamento, ijjj);
             calculador.RealizaCalculo(orcamento, ikkk);
 
+            Console.WriteLine("-------------------------");
+
             //cálculo direto, sem passar por mais ninguém:
             Console.WriteLine(iss.Calcula(orcamento));
             Console.WriteLine(icms.Calcula(orcamento));
             Console.WriteLine(ijjj.Calcula(orcamento));
             Console.WriteLine(ikkk.Calcula(orcamento));
+
+            //DECORATOR - Imposto composto da soma de vários impostos
+            //Cria o objeto de imposto já passando pelo construtor todos os impostos que deverão ser utilizados
+            Imposto i = new Iss(new Icms(new Ijjj(new Ikkk())));
+            Console.WriteLine(i.Calcula(orcamento));
 
             Console.ReadKey();
         }
